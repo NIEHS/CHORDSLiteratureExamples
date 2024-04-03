@@ -1,0 +1,215 @@
+body {
+         
+    font-size: 15;
+    font-family: Arial;/*sans-serif;*/
+    margin-right: 15%;
+    margin-left: 15%;
+    #margin: 0;
+    padding: 10 20px;
+    letter-spacing:1.2px;   
+    line-height: 25px;
+    font-weight: lighter;
+    #background-image: url('./imgs/bbg.gif');
+    
+    #background-opacity: 0.6;
+     
+    
+}
+
+
+header {
+    /*background-image: url('blue-bg.png');
+    #background-color: whitesmoke;##CFD8DC;*/
+    padding: 1px 1px;
+    text-align: center;
+    
+}
+h1 {
+    font-size: 2.5em;
+    margin: .6em 0
+}
+
+/*h1 {
+     font-family: sans-serif;
+    margin: 0;
+    color:  black;
+    text-align: center;
+}*/
+h2 {
+    font-size: 1.5em;
+    margin: .67em 0;
+    text-align: center;
+    background: #2777bf;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: white;
+}
+/*h2 {
+     font-family: sans-serif;
+    margin: 0;
+    color: black;#344951;
+    text-align: center;
+}*/
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    size: 120px 50px;
+    background-color: whitesmoke;
+    border: 1px solid lightgrey;/*#518611;*/
+    box-shadow: 2px 2px 15px grey;
+
+}
+
+.main table {
+    border-collapse: collapse;    
+    border-inline-style: groove ;
+    padding: 10 20px;
+    align: left;
+}
+.main th {
+     background-color:#a3d6d6 ;
+        color: white;
+}
+.main td {
+    border: 3px solid;
+    align-items: flex-end;
+}
+
+.main tr {
+    tr:hover:{
+        background-color: #77A22C;}
+}
+
+
+.exposure-style {
+  background-color: whitesmoke; /* skyblue; #a3d6d6; styles every first td */
+  border-collapse: collapse; 
+  text-align: left;  
+
+    border-inline-style: groove ;
+    tr:hover {
+        background-color: #77A22C;}
+
+    th {
+        background-color: #518611;/*#a3d6d6 ;*/
+        color: white;}
+     
+    td{
+        border: 2px solid;
+        vertical-align: top;
+        padding-left: 10px;
+        }
+}
+
+.exposure-child-style {
+  background-color: brown; /* styles every first td */
+
+}
+
+.health-style  {
+  background-color: lightgreen; /* styles every second td */
+}
+
+.text-image-combined {
+    position: relative;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: auto; /* or specific width */
+    height: auto; /* or specific height */
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: auto; /* or specific width */
+    height: auto; /* or specific height */
+}
+
+.aligncenter {
+    float: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 450px; /* or specific width */
+    height: 350px; /* or specific height */
+}
+
+/* Clear fix for the float */
+.text-image-combined::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.row {
+    display: flex;    
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.column {
+    flex: 1;
+    margin-right: 5px; /* Space between columns, adjust as needed */
+}
+
+.column:last-child {
+    margin-right: 0; /* No margin for the last column to align properly */
+}
+
+
+.text-column {
+    flex: 1;
+    background-color: #ECEFF1;    
+    padding-right: 25px;/* Adjust spacing between text and image */
+    padding-left: 25px;
+}
+
+.image-column {
+    flex: 1;
+    background-color: #D7DBDD;
+    padding-left: 5px; /* Adjust spacing between text and image */
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Add media queries if you want to stack the sections on smaller screens */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .column {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between sections when stacked */
+    }
+    
+    .column:last-child {
+        margin-bottom: 0; /* No bottom margin for the last section */
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-column, .image-column {
+        padding: 0;
+    }
+
+    .image-column {
+        margin-top: 20px;
+    }
+}
