@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    #margin: 0;
+    padding: 0 20px;
+    background-color: #CFD8DC;
+}
+
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+    color: #344951;
+}
+
+.main table {
+    border-collapse: collapse;    
+    border-inline-style: groove ;
+    padding: 10 20px;
+}
+.main th {
+     background-color:#a3d6d6 ;
+        color: white;
+}
+.main td {
+    border: 3px solid;
+}
+
+.main tr {
+    tr:hover:{
+        background-color: skyblue;}
+}
+
+th:nth-child(2) {
+    background-color:red ;
+}
+.exposure-style {
+  background-color: #a3d6d6; /* styles every first td */
+  border-collapse: collapse;   
+
+    border-inline-style: groove ;
+    tr:hover {
+        background-color: skyblue;}
+
+    th {
+        background-color:#a3d6d6 ;
+        color: black;}
+     
+    td{
+        border: 2px solid;
+        vertical-align: top;
+        }
+}
+
+.exposure-child-style {
+  background-color: brown; /* styles every first td */
+
+}
+
+.health-style  {
+  background-color: lightgreen; /* styles every second td */
+}
+
+.text-image-combined {
+    position: relative;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: auto; /* or specific width */
+    height: auto; /* or specific height */
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: auto; /* or specific width */
+    height: auto; /* or specific height */
+}
+
+.aligncenter {
+    float: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 450px; /* or specific width */
+    height: 350px; /* or specific height */
+}
+
+/* Clear fix for the float */
+.text-image-combined::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.row {
+    display: flex;    
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.column {
+    flex: 1;
+    margin-right: 5px; /* Space between columns, adjust as needed */
+}
+
+.column:last-child {
+    margin-right: 0; /* No margin for the last column to align properly */
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 1px;
+}
+.text-column {
+    flex: 1;
+    background-color: #ECEFF1;    
+    padding-right: 25px;/* Adjust spacing between text and image */
+    padding-left: 25px;
+}
+
+.image-column {
+    flex: 1;
+    background-color: #D7DBDD;
+    padding-left: 5px; /* Adjust spacing between text and image */
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Add media queries if you want to stack the sections on smaller screens */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .column {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between sections when stacked */
+    }
+    
+    .column:last-child {
+        margin-bottom: 0; /* No bottom margin for the last section */
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-column, .image-column {
+        padding: 0;
+    }
+
+    .image-column {
+        margin-top: 20px;
+    }
+}
